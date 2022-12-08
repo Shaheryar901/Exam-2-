@@ -1,0 +1,49 @@
+
+x-----xxx--------xxxx--xxx
+RECURSIVE DECENT ALGORITHM FOR EXAM 2 ( Names with the letter H) 
+x-----xxx--------xxxx--xxx
+
+EBNF----
+
+
+S = <start>
+V = { <start>, <statement>, <ifstatement>, <forloop>, <whileloop>, <switch>, <switchset>, <expression>,
+	<booleanexpresion>, <var>, id, integer, <assert>, <type>, <equivalence>, id | integer|}
+
+∑ = { henry, harper, hudson, hazel, hannah, hunter, hailey, hector, hector, holden, hayes (, ), {, }, [, ], =, <, >, <=, >=, ==, !=, +, -, *, /, %, integer, id, $, @ 
+
+R = [
+		<start>         --> hannah ( <statement> )
+		<statement>        --> <forloop><statmnt> | <whileloop><statement> | <var><statement> |
+							<ifstatement><statement> | <switch><switchset> | <assert><statement> | ε
+    <forlp>         --> henry (<type> <assert>; <boolexpression>; <expression>) <statement> $
+    <whileloop>         --> harper (<boolexpression>) <statement> $ | harper (<boolexpression>) hayes <statemnt> $ 
+		<swtch>         --> hazel(id) <switchset> $
+		<switchset>       --> hunter integer : <statement> |ε
+		<ifstatement>       --> moshimo (<boolexpression>) <statement> hudson <statement> @ 
+							| moshimo (<boolexpression>) <statement> @
+
+		<var>           --> <type> id ; | <type> id = <expression> ; 
+		
+		<assert>        --> id = <1pexpression> ;		
+
+		<alpha>         --> a | b | c | ... | z | A | B | C | ... | Z 
+		
+		<type>          --> hailey | hector | hector | holden
+
+		<1pexpression>       --> <1pexpression> + <2pexpression> | <1pexpression> - <2pexpression> | <2pexpression>
+
+    <2pexpression>       --> <2pexpression> * <expression> | <2pexpression> / <expression> | id | integer | % <expression> | <expression>
+
+    <expression>         -->  (<1pexpression>) | id | integer
+
+		<boolexpression>     --> <1pexpression> <equivalence> <1pexpression>		
+
+    <equivalence>       --> < | <= | == | > | >= | !=
+
+Precedence operations -------
+1 + | -
+2 * | / | %
+3 ()
+ASMDP precedence
+
